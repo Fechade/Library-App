@@ -79,6 +79,14 @@ class DisplayBooks {
   });
 
   submitBook.addEventListener("click", () => {
+    if(title.value === "" || author.value === "" || pages.value === "" ) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You cannot leave any field empty!',
+      })
+      return
+    }
     Book.addBookToLibrary(title.value, author.value, pages.value);
     infoForm.style.display = "none";
     addBook.style.display = "block";
