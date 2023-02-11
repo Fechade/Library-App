@@ -65,6 +65,8 @@ class DisplayBooks {
         ? (addBook.style.display = "none")
         : (addBook.style.display = "block");
     }
+
+    infoForm.reset()
   });
 
   read.addEventListener("click", (e) => {
